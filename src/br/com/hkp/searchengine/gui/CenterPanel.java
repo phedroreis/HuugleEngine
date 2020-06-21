@@ -4,6 +4,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Iterator;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -18,7 +19,7 @@ import javax.swing.JPanel;
  ******************************************************************************/
 public final class CenterPanel extends JPanel
 {
-    private static final int NUMBER_OF_TEXTFIELDS = 5;
+    private static final int NUMBER_OF_TEXTFIELDS = 6;
      
     WordFieldPanel[] wordFieldPanelArray;
     
@@ -70,8 +71,8 @@ public final class CenterPanel extends JPanel
     {
         ArrayList<String> list = new ArrayList<>(NUMBER_OF_TEXTFIELDS);
         
-        boolean noPlusSignal = true;
-        String word;
+        boolean plusSignal = false;
+   
         /*
         Testa se ha algum sinal de mais precedendo alguma das palavras digitadas
         nos campos. Se houver, so serao incluidas no array retornado por este 
@@ -82,41 +83,29 @@ public final class CenterPanel extends JPanel
         */
         for (WordFieldPanel wordFieldPanel : wordFieldPanelArray)
         {
-            word = wordFieldPanel.getText();
-            if ((!word.isEmpty()) && (word.charAt(0) == '+'))
-            {
-                noPlusSignal = false;
-                break;
-            }
-        }    
-        
-        for (WordFieldPanel wordFieldPanel : wordFieldPanelArray)
-        {
-            boolean addWord = false;
-            
-            word = wordFieldPanel.getText();
+            String word = wordFieldPanel.getText();
             
             if (word.isEmpty()) continue;
             
-            char firstChar = word.charAt(0);
-            /*
-            Palavras que iniciam sem operador soh serao incluidas no array
-            retornado se nao houver nenhuma outra sendo precedida por + e se 
-            tiverem mais que 3 caracteres
-            */
-            if (Character.isLetter(firstChar))
-                addWord = ((word.length() > 3) && (noPlusSignal));
-            else
-            /*
-            Palavras precedidas de + ou de - soh serao incluidas no array 
-            retornado por este metodo se tiverem mais de 3 letras. Ou seja, 
-            o operador de mais ou de menos e 4 ou mais letras.
-            */    
-                addWord = (word.length() > 4);
+            list.add(word);
             
-            if ((addWord) && (!list.contains(word))) list.add(word);
-        }//for
-                   
+            if (word.charAt(0) == '+') plusSignal = true;
+        }//for 
+        
+        /*
+        Se ha alguma palavra na lista com prefixo +, retira da lista todas as
+        palavras que comecem com letras. Ou seja, que nao comecem com + ou -
+        */
+        if (plusSignal)
+        {
+            Iterator<String> it = list.iterator();
+            while(it.hasNext())
+            {
+                if (Character.isLetter(it.next().charAt(0))) it.remove();
+            }
+           
+        }//if
+                 
         return list.toArray(new String[list.size()]);
         
     }//getWords()

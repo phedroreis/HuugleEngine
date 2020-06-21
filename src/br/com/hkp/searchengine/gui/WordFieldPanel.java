@@ -1,6 +1,7 @@
 package br.com.hkp.searchengine.gui;
 
 import br.com.hkp.searchengine.gui.basic.JWordField;
+import static br.com.hkp.searchengine.util.Global.EXCLUDEDS;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
@@ -49,7 +50,23 @@ public final class WordFieldPanel extends JPanel
      */
     public String getText()
     {
-        return jTextField.getValue();
+        String value = jTextField.getValue();
+        
+        if (value.isEmpty()) return "";
+                
+        switch (value.charAt(0))
+        {
+            case '+':
+            case '-':
+                if (value.length() < 5) return "";
+                break;
+            default:
+                if (value.length() < 4) return "";
+        }
+               
+        if (EXCLUDEDS.contains(value)) return "";
+        
+        return value;
     }//getText()
          
     /*[02]----------------------------------------------------------------------

@@ -10,9 +10,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.HashSet;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.TreeSet;
 
 /*******************************************************************************
  * A classe define constantes e campos de acesso global a todas as classes.
@@ -45,7 +46,7 @@ public final class Global
      * do indice de palavras catalogadas em posts e titulos de topicos por serem
      * palavras de ocorrencia muito comum
      */
-    public static final TreeSet<String> EXCLUDEDS = new TreeSet<>();
+    public static final HashSet<String> EXCLUDEDS = new HashSet<>(1024);
     
     /**
      * Obtem uma ID de usuario a partir do nick de usuario
@@ -320,7 +321,11 @@ public final class Global
         ) 
             throws IOException
         {
-            in = new BufferedReader(new FileReader(fileName), buffer);
+            in = new BufferedReader
+                 (
+                     new FileReader(fileName, StandardCharsets.UTF_8), 
+                     buffer
+                 );
         }//construtor
 
         /*[01]------------------------------------------------------------------
