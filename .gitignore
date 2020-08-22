@@ -6,3 +6,6 @@
 
 *.pdf
 /dist/
+*.class
+*.jar
+*.html

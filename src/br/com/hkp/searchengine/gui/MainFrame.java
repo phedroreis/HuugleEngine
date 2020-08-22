@@ -2,7 +2,10 @@ package br.com.hkp.searchengine.gui;
 
 import br.com.hkp.searchengine.main.Huugle;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
@@ -31,6 +34,7 @@ public final class MainFrame extends JFrame implements WindowListener
     *
     --------------------------------------------------------------------------*/
     /**
+     * Cria a janela principal do programa.
      * 
      * @throws IOException
      */
@@ -65,8 +69,30 @@ public final class MainFrame extends JFrame implements WindowListener
         resultsFrame = new ResultsFrame(mainPanel);
         
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        setSize(600, 335);
-        setResizable(false);
+        setSize(650, 335);
+        setMinimumSize(new Dimension(650,335));
+     
+        /*
+        Impede que a janela principal assuma dimensoes menores que as definidas
+        em setMinimunSize() em qualquer plataforma. Porque o metodo 
+        setMinimumSize() eh plataforma dependente e pode nao funcionar em
+        algumas.
+        */
+        addComponentListener
+        (
+            new ComponentAdapter()
+            {
+                @Override
+                public void componentResized(ComponentEvent e)
+                {
+                    Dimension d = getSize();
+                    Dimension minD = getMinimumSize();
+                    if(d.width < minD.width) d.width = minD.width;
+                    if(d.height < minD.height) d.height = minD.height;
+                    setSize(d);
+                }
+            }
+        );
                      
         //Insere o icone do forum na janela
         try

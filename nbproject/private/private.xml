@@ -3,33 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/NorthPanel.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/builddatabase/BuildWordsFile.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/registers/Register.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/json/Json.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/DatePanel.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/builddatabase/BuildNicksUserFile.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/basic/JWordField.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/EastPanel.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/builddatabase/Merge.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/WordFieldPanel.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/ResultsFrame.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/arrays/Array.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/util/Global.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/main/Huugle.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/arrays/TopicExtendedArray.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/ButtonsPanel.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/json/JsonReader.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/main/SearchEngine.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/CenterPanel.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/arrays/PostRegArray.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/arrays/PostExtendedArray.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/registers/PostReg.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/basic/JGenericField.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/util/Util.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/builddatabase/ListFile.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/WestPanel.java</file>
-            <file>file:/C:/Users/userhugo/Documents/NetBeansProjects/Hugle/src/br/com/hkp/searchengine/gui/MainFrame.java</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/compileHuugle.bat</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/manifest.txt</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/compileHuugle.sh</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/gui/MainFrame.java</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/util/Global.java</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/gui/JSlidersPanel.java</file>
         </group>
     </open-files>
 </project-private>

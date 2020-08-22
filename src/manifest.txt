@@ -1,0 +1,2 @@
+Main-Class: br.com.hkp.searchengine.main.Huugle
+Name: br/com/hkp/searchengine/main/Huugle.class

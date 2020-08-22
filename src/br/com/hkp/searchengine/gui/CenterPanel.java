@@ -38,12 +38,7 @@ public final class CenterPanel extends JPanel
         setLayout(new GridLayout(NUMBER_OF_TEXTFIELDS + 1, 1));
         wordFieldPanelArray = new WordFieldPanel[NUMBER_OF_TEXTFIELDS];
         
-        JLabel jLabel = new JLabel
-                        (
-                            "   Pesquisar pelas palavras:"
-                        );
-                     
-        add(jLabel);
+        add(new JLabel("   Pesquisar pelas palavras:"));
         
         EnterHandler enterHandler = new EnterHandler();
         

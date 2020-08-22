@@ -23,9 +23,9 @@ public final class JSlidersPanel extends JPanel
     private static final String[] LABELS =
     {
         "Repeti\u00e7\u00e3o de palavras",
-        "Quantidade de palavras no t\u00edtulo do t\u00f3pico",
+        "N\u00fam. de palavras no t\u00edtulo do t\u00f3pico",
         "M\u00e9dia de visualiza\u00e7\u00f5es di\u00e1rias",
-        "Quantidade de palavras localizadas"
+        "N\u00fam. de palavras localizadas"
     };
     
     private static final String[] MESSAGES =

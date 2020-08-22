@@ -221,7 +221,7 @@ public final class ResultsFrame extends JFrame
             String topicID = file.substring(6, file.indexOf('.'));
             topicExtendedArray.read(topicID);
             String title = topicExtendedArray.getTitle();
-            String link = url + "\">" + title;
+            String link = url + "\" target = \" _blank \">" + title;
             
             /*
             Acrescenta em StringBuilder sb o link montado. 

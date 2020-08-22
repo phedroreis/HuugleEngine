@@ -119,16 +119,22 @@ public final class Global
     public static final String JSONS_DIR_NAME = "../Gambiarra/Projeto/jsons";
     /**
      * Diretorio onde devem ser lidos e/ou gravados os arquivos dat
+     * 
+     * Diretorio da versao para instalar no Ubuntu
      */
-    public static final String DAT_DIR_NAME = "database";
+    //public static final String DAT_DIR_NAME = "database";
+    public static final String DAT_DIR_NAME = "/opt/HuugleEngine/database";
     /**
      * URL base da versao online estatica do forum
      */
     public static final String URL_BASE = "https://clubecetico.org/acervo";
     /**
      * URL do arquivo para exibir no navegador o resultado das pesquisas
+     * 
+     * Arquivo da versao para instalar no Ubuntu
      */
-    public static final String RESULTS_FILENAME = "results.html";
+    //public static final String RESULTS_FILENAME = "results.html";
+    public static final String RESULTS_FILENAME = "/tmp/huugleResults.html";
     /**
      * Nome do arquivo com os indices que recuperam uma userID pela chave 
      * primaria nick do usuario
