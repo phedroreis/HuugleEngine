@@ -5,4 +5,10 @@
 /log/
 
 *.pdf
+
 /dist/
+
+*.class
+
+*.html
+
