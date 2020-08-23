@@ -2,13 +2,14 @@ package br.com.hkp.searchengine.main;
 
 import br.com.hkp.searchengine.arrays.PostRegArray;
 import br.com.hkp.searchengine.gui.ResultsFrame;
-import static br.com.hkp.searchengine.util.Global.URL_BASE;
+import static br.com.hkp.searchengine.util.Global.installDir;
 import static br.com.hkp.searchengine.util.Global.postExtendedArray;
 import static br.com.hkp.searchengine.util.Global.postsPostRegArray;
 import static br.com.hkp.searchengine.util.Global.postsWordFinder;
 import static br.com.hkp.searchengine.util.Global.topicExtendedArray;
 import static br.com.hkp.searchengine.util.Global.topicsPostRegArray;
 import static br.com.hkp.searchengine.util.Global.topicsWordFinder;
+import static br.com.hkp.searchengine.util.Global.urlBase;
 import br.com.hkp.searchengine.util.Util;
 import static br.com.hkp.searchengine.util.Util.number2Date;
 import java.io.IOException;
@@ -496,9 +497,9 @@ public final class SearchEngine
         public String getURL(boolean web)
         {
             if (web)
-                return  URL_BASE + "/forum/" + getFile();
+                return  urlBase + "/forum/" + getFile();
             else
-                return  "../forum/" + getFile();
+                return  installDir + "/clubecetico.org/forum/" + getFile();
         }//getURL()
 
         /*[06]------------------------------------------------------------------

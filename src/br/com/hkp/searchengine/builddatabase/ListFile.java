@@ -1,11 +1,9 @@
 package br.com.hkp.searchengine.builddatabase;
 
 import br.com.hkp.searchengine.registers.PostReg;
-import br.com.hkp.searchengine.registers.TopicExtendedReg;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.postListsFilename;
-import static br.com.hkp.searchengine.util.Global.topicExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.POST_LISTS_FILENAME;
 import java.io.IOException;
 
 /*******************************************************************************
@@ -22,10 +20,10 @@ public class ListFile
     {
         try 
         {
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             PostReg postReg =
-                new PostReg(datDirName + postListsFilename);
+                new PostReg(datDirName + POST_LISTS_FILENAME);
             
             postReg.openToRead();
             

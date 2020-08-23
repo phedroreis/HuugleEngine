@@ -5,7 +5,7 @@ import static
 import static
     br.com.hkp.searchengine.registers.RegistersConstants.TOPIC_ID_STRLENGTH;
 import br.com.hkp.searchengine.util.Global;
-import static br.com.hkp.searchengine.util.Global.topicExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.TOPIC_EXTENDED_FILENAME;
 import java.io.IOException;
 
 /*******************************************************************************
@@ -23,7 +23,7 @@ public final class TopicExtendedArray extends Array
     --------------------------------------------------------------------------*/
     public TopicExtendedArray() throws IOException
     {
-        super(topicExtendedFilename, RECORD_LENGTH);
+        super(TOPIC_EXTENDED_FILENAME, RECORD_LENGTH);
     }//construtor
     
     /*[01]----------------------------------------------------------------------

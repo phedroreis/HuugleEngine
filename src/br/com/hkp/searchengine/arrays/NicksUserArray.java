@@ -5,7 +5,7 @@ import static
 import static 
     br.com.hkp.searchengine.registers.RegistersConstants.USER_ID_STRLENGTH;
 import br.com.hkp.searchengine.util.Global;
-import static br.com.hkp.searchengine.util.Global.nicksUserFilename;
+import static br.com.hkp.searchengine.util.Global.NICKS_USER_FILENAME;
 import java.io.IOException;
 
 /*******************************************************************************
@@ -22,7 +22,7 @@ public final class NicksUserArray extends Array
     --------------------------------------------------------------------------*/
     public NicksUserArray() throws IOException
     {
-        super(nicksUserFilename, RECORD_LENGTH);
+        super(NICKS_USER_FILENAME, RECORD_LENGTH);
     }//construtor
     
     /*[01]----------------------------------------------------------------------

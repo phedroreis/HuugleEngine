@@ -11,7 +11,7 @@ import static br.com.hkp.searchengine.json.PostJson.POST_INDEX_INDEX;
 import static br.com.hkp.searchengine.json.PostJson.POST_TOPICID_INDEX;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.postExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.POST_EXTENDED_FILENAME;
 import br.com.hkp.searchengine.util.Util;
 import java.io.IOException;
 import java.util.Comparator;
@@ -57,7 +57,7 @@ public final class BuildPostExtendedFile
         throws IOException
     {
         PostExtendedReg postExtendedReg = 
-            new PostExtendedReg(datDirName + postExtendedFilename);
+            new PostExtendedReg(datDirName + POST_EXTENDED_FILENAME);
             
         postExtendedReg.openToWrite();
         
@@ -102,7 +102,7 @@ public final class BuildPostExtendedFile
             /*
             Inicializa variaveis globais como nomes de arquivos e diretorios
             */
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             /*
             Todos os registros construidos a partir de dados obtidos de um

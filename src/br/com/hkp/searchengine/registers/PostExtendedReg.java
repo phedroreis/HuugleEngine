@@ -3,7 +3,7 @@ package br.com.hkp.searchengine.registers;
 import static br.com.hkp.searchengine.registers.RegistersConstants.*;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.postExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.POST_EXTENDED_FILENAME;
 import java.io.IOException;
 
 /*******************************************************************************
@@ -304,7 +304,7 @@ public class PostExtendedReg extends Register
         {
             Global.initializer();
             PostExtendedReg p = 
-                new PostExtendedReg(datDirName + postExtendedFilename);
+                new PostExtendedReg(datDirName + POST_EXTENDED_FILENAME);
             p.openToRead();
             if (p.read("34")) System.out.println(p);
             if (p.read("10000")) System.out.println(p);

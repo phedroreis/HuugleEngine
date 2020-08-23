@@ -3,7 +3,7 @@ package br.com.hkp.searchengine.registers;
 import static br.com.hkp.searchengine.registers.RegistersConstants.*;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.topicExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.TOPIC_EXTENDED_FILENAME;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -284,7 +284,7 @@ public final class TopicExtendedReg extends Register
         {
             Global.initializer();
             TopicExtendedReg t = 
-                new TopicExtendedReg(datDirName + topicExtendedFilename);
+                new TopicExtendedReg(datDirName + TOPIC_EXTENDED_FILENAME);
             t.openToRead();
             if (t.read("10")) System.out.println(t);
             if (t.read("10020")) System.out.println(t);

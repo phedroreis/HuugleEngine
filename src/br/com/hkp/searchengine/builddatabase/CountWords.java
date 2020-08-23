@@ -123,7 +123,7 @@ public class CountWords
     {
         try
         {
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             buildLog = new BuildLog("/count_words.log", 1024000);
             

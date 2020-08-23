@@ -10,7 +10,7 @@ import br.com.hkp.searchengine.registers.TopicExtendedReg;
 import br.com.hkp.searchengine.registers.WordReg;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.topicExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.TOPIC_EXTENDED_FILENAME;
 import br.com.hkp.searchengine.util.Util;
 import java.io.IOException;
 import java.util.Comparator;
@@ -133,7 +133,7 @@ public class BuildWordsFile
         
                
         TopicExtendedReg topicExtendedReg = 
-            new TopicExtendedReg(datDirName + topicExtendedFilename);
+            new TopicExtendedReg(datDirName + TOPIC_EXTENDED_FILENAME);
         
         topicExtendedReg.openToRead();
         
@@ -264,7 +264,7 @@ public class BuildWordsFile
     {
         try
         {
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             buildLog = new BuildLog("/words.log", 1024000);
             

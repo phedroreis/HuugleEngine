@@ -10,7 +10,7 @@ import static br.com.hkp.searchengine.json.TopicJson.TOPIC_VIEWS_INDEX;
 import br.com.hkp.searchengine.registers.TopicExtendedReg;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.topicExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.TOPIC_EXTENDED_FILENAME;
 import br.com.hkp.searchengine.util.Util;
 import java.io.IOException;
 import java.util.Comparator;
@@ -35,7 +35,7 @@ public final class BuildTopicExtendedFile
         throws IOException
     {
         TopicExtendedReg topicExtendedReg = 
-            new TopicExtendedReg(datDirName + topicExtendedFilename);
+            new TopicExtendedReg(datDirName + TOPIC_EXTENDED_FILENAME);
             
         topicExtendedReg.openToWrite();
         
@@ -68,7 +68,7 @@ public final class BuildTopicExtendedFile
         {
             buildLog = new BuildLog("/topics_extended.log", 1024000);
             
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             TreeSet<TopicExtendedReg> index = 
                 new TreeSet<>(new TopicExtendedRegComparator());

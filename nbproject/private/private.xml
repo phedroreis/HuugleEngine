@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/compileHuugle.bat</file>
-            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/manifest.txt</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/gui/ResultsFrame.java</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/compileHuugle.sh</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/gui/MainFrame.java</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/main/SearchEngine.java</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/util/Global.java</file>
-            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/HuugleEngine/src/br/com/hkp/searchengine/gui/JSlidersPanel.java</file>
         </group>
     </open-files>
 </project-private>

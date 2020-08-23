@@ -10,8 +10,9 @@ import static
 import br.com.hkp.searchengine.registers.WordReg;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.postListsForTopicsFilename;
-import static br.com.hkp.searchengine.util.Global.topicsWordsFilename;
+import static 
+    br.com.hkp.searchengine.util.Global.POST_LISTS_FOR_TOPICS_FILENAME;
+import static br.com.hkp.searchengine.util.Global.TOPICS_WORDS_FILENAME;
 import br.com.hkp.searchengine.util.Util;
 import java.io.IOException;
 import java.util.Comparator;
@@ -35,9 +36,10 @@ public class BuildTopicsWordsFile
     private static void make(final TreeMap<String, TreeSet<PostReg>> index) 
         throws IOException
     {
-        WordReg wordReg = new WordReg(datDirName + topicsWordsFilename);
+        WordReg wordReg = new WordReg(datDirName + TOPICS_WORDS_FILENAME);
         
-        PostReg postReg = new PostReg(datDirName + postListsForTopicsFilename);
+        PostReg postReg = 
+            new PostReg(datDirName + POST_LISTS_FOR_TOPICS_FILENAME);
            
         wordReg.openToWrite();
         
@@ -230,7 +232,7 @@ public class BuildTopicsWordsFile
     {
         try
         {
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             buildLog = new BuildLog("/topics_words.log", 1024000);
             

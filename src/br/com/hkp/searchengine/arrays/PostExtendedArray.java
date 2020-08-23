@@ -9,7 +9,7 @@ import static
 import static 
     br.com.hkp.searchengine.registers.RegistersConstants.USER_ID_STRLENGTH;
 import br.com.hkp.searchengine.util.Global;
-import static br.com.hkp.searchengine.util.Global.postExtendedFilename;
+import static br.com.hkp.searchengine.util.Global.POST_EXTENDED_FILENAME;
 import java.io.IOException;
 
 /*******************************************************************************
@@ -28,7 +28,7 @@ public final class PostExtendedArray extends Array
     --------------------------------------------------------------------------*/
     public PostExtendedArray() throws IOException
     {
-        super(postExtendedFilename, RECORD_LENGTH);
+        super(POST_EXTENDED_FILENAME, RECORD_LENGTH);
     }//construtor
     
     /*[01]----------------------------------------------------------------------

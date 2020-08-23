@@ -8,7 +8,7 @@ import static br.com.hkp.searchengine.json.UserJson.USER_NICK_INDEX;
 import br.com.hkp.searchengine.registers.NicksUserReg;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.nicksUserFilename;
+import static br.com.hkp.searchengine.util.Global.NICKS_USER_FILENAME;
 import br.com.hkp.searchengine.util.Util;
 import java.io.IOException;
 import java.util.Comparator;
@@ -33,7 +33,7 @@ public final class BuildNicksUserFile
         throws IOException
     {
         NicksUserReg nicksUserReg = 
-            new NicksUserReg(datDirName + nicksUserFilename);
+            new NicksUserReg(datDirName + NICKS_USER_FILENAME);
             
         nicksUserReg.openToWrite();
         
@@ -54,7 +54,7 @@ public final class BuildNicksUserFile
         buildLog.writeln
         (
             "\n" + count + " registros gravados em " + 
-            datDirName + nicksUserFilename
+            datDirName + NICKS_USER_FILENAME
         );
             
     }//make() 
@@ -74,7 +74,7 @@ public final class BuildNicksUserFile
         {
             buildLog = new BuildLog("/nicks_user.log", 1024000);
             
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             TreeSet<NicksUserReg> index = new TreeSet<>(new NicksComparator());
     

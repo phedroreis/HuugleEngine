@@ -3,7 +3,7 @@ package br.com.hkp.searchengine.arrays;
 import static br.com.hkp.searchengine.registers.RegistersConstants.POST_ID_STRLENGTH;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.postListsFilename;
+import static br.com.hkp.searchengine.util.Global.POST_LISTS_FILENAME;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -86,8 +86,8 @@ public class PostRegArray
     --------------------------------------------------------------------------*/
     public static void main(String[] args) throws IOException
     {
-       Global.initializeFilenames();
-       PostRegArray p = new PostRegArray(datDirName + postListsFilename);
+       Global.initializeDirNames();
+       PostRegArray p = new PostRegArray(datDirName + POST_LISTS_FILENAME);
        byte[] block = p.read(0, 1215);
        for (int i = 0; i < 1215; i++)
        {

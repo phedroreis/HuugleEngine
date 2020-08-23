@@ -6,14 +6,17 @@ import br.com.hkp.searchengine.main.SearchEngine.TreeSetNode;
 import static br.com.hkp.searchengine.util.Global.CONST_LENGTH;
 import static br.com.hkp.searchengine.util.Global.INFIX_1;
 import static br.com.hkp.searchengine.util.Global.INFIX_2;
-import static br.com.hkp.searchengine.util.Global.PART_1;
+import static br.com.hkp.searchengine.util.Global.PART_1A;
+import static br.com.hkp.searchengine.util.Global.PART_1B;
+import static br.com.hkp.searchengine.util.Global.PART_1C;
 import static br.com.hkp.searchengine.util.Global.PART_2;
 import static br.com.hkp.searchengine.util.Global.PART_3;
 import static br.com.hkp.searchengine.util.Global.PREFIX;
-import static br.com.hkp.searchengine.util.Global.RESULTS_FILENAME;
 import static br.com.hkp.searchengine.util.Global.SUFIX;
 import static br.com.hkp.searchengine.util.Global.VAR_LENGTH;
+import static br.com.hkp.searchengine.util.Global.datDirName;
 import static br.com.hkp.searchengine.util.Global.nicksUserArray;
+import static br.com.hkp.searchengine.util.Global.RESULTS_FILENAME;
 import static br.com.hkp.searchengine.util.Global.topicExtendedArray;
 import br.com.hkp.searchengine.util.Util;
 import java.awt.BorderLayout;
@@ -178,7 +181,8 @@ public final class ResultsFrame extends JFrame
         /*
         Preve quanta memoria sera necessaria para armazenar o texto do arquivo
         */
-        int buffer = CONST_LENGTH + (list.size() * VAR_LENGTH);
+        int buffer = 
+            CONST_LENGTH + datDirName.length() * 2  + list.size() * VAR_LENGTH;
         
         /*
         Cria um StringBuilder onde sera montado o texto do arquivo HTML
@@ -186,10 +190,11 @@ public final class ResultsFrame extends JFrame
         StringBuilder sb = new StringBuilder(buffer);
         
         /*
-        PART_1 e PART_2 sao partes jah prontas do arquivo, que serao sempre as 
+        PART_1x e PART_2 sao partes jah prontas do arquivo, que serao sempre as 
         mesmas. Como o header, etc... A string s eh inserida no local apropriado
         */
-        sb.append(PART_1).append(s).append(PART_2);
+        sb.append(PART_1A).append(datDirName).append(PART_1B).append(datDirName)
+        .append(PART_1C).append(s).append(PART_2);
         
         /*
         Conta quantos links jah inseriu no arquivo

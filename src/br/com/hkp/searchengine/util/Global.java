@@ -29,16 +29,9 @@ public final class Global
      * programa
      */
     public static String jsonsDirName; 
+    public static String installDir;
     public static String datDirName;
     public static String urlBase;
-    public static String resultsFilename;
-    public static String nicksUserFilename;
-    public static String wordsFilename;
-    public static String postListsFilename;
-    public static String postExtendedFilename;
-    public static String topicExtendedFilename;
-    public static String topicsWordsFilename;
-    public static String postListsForTopicsFilename;
     public static File helpFile;
     
     /**
@@ -113,27 +106,33 @@ public final class Global
      * programa.
      */
     public static Lock FINALIZE_LOCK = new ReentrantLock();
-    /**
+    /*
      * Diretorio onde devem ser lidos e/ou gravados arquivos json
+     * As classes desse projeto que acessam este diretorio devem ser executadas
+     * dentro do NetBeans para que encontrem o diretorio no caminho relativo ao
+     * projeto Gambiarra
      */
-    public static final String JSONS_DIR_NAME = "../Gambiarra/Projeto/jsons";
-    /**
+    private static final String JSONS_DIR_NAME = "../Gambiarra/Projeto/jsons";
+    /*
+    Diretorio de instalacao do programa no Ubuntu
+    */
+    private static final String INSTALL_DIR = "/opt";
+    /*
      * Diretorio onde devem ser lidos e/ou gravados os arquivos dat
      * 
      * Diretorio da versao para instalar no Ubuntu
      */
-    //public static final String DAT_DIR_NAME = "database";
-    public static final String DAT_DIR_NAME = "/opt/HuugleEngine/database";
-    /**
+    private static final String DAT_DIR_NAME = 
+        "/clubecetico.org/Huugle/database";
+    /*
      * URL base da versao online estatica do forum
      */
-    public static final String URL_BASE = "https://clubecetico.org/acervo";
+    private static final String URL_BASE = "https://clubecetico.org/acervo";
     /**
      * URL do arquivo para exibir no navegador o resultado das pesquisas
      * 
      * Arquivo da versao para instalar no Ubuntu
      */
-    //public static final String RESULTS_FILENAME = "results.html";
     public static final String RESULTS_FILENAME = "/tmp/huugleResults.html";
     /**
      * Nome do arquivo com os indices que recuperam uma userID pela chave 
@@ -172,8 +171,10 @@ public final class Global
      */
     public static final String POST_LISTS_FOR_TOPICS_FILENAME = 
         "/post_lists_for_topics.dat";
-    
-    public static final String HELP_FILENAME = "/manual.pdf";
+    /*
+    Nome do arquivo PDF com o manual do programa
+    */
+    private static final String HELP_FILENAME = "/manual.pdf";
       
     /**************************************************************************
      * Strings para compor o arquivo HTML listando resultados de uma pesquisa
@@ -187,12 +188,15 @@ public final class Global
     public static final String SUFIX = 
        "<br /></td></tr>\n";
     
-    public static final String PART_1 = 
+    public static final String PART_1A = 
 "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" " +
 "\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" +
 "<html xmlns=\"http://www.w3.org/1999/xhtml\">" +
 "<head><link rel=\"stylesheet\" type=\"text/css\" " +
-"href=\"" + DAT_DIR_NAME + "/index_green.css?fin20\" />" +
+"href=\"";
+    
+    public static final String PART_1B =
+"/index_green.css?fin20\" />" +
 "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />" +
 "<meta name=\"description\" content=\"Pesquisa\" />" +
 "<title>Pesquisa</title><link rel=\"canonical\" " +
@@ -202,7 +206,10 @@ public final class Global
 "<div id=\"header\"><div class=\"frame\">" +
 "<div id=\"top_section\"><h1 class=\"forumtitle\">" +
 "<a href=\"../index-2.html\">" +
-"<img src=\"" + DAT_DIR_NAME  + "/logo.png\" " +
+"<img src=\"";
+    
+    public static final String PART_1C = 
+"/logo.png\" " +
 "alt=\"Forum Clube Cetico\" /></a></h1></div>" +
 "<div id=\"upper_section\" class=\"middletext\"><div class=\"user\">" +
 "</div><div><a href=\"../index-2.html\"></a></div>" +
@@ -238,7 +245,8 @@ public final class Global
         + 500;
     
     public static final int CONST_LENGTH = 
-        PART_1.length() + PART_2.length();
+        PART_1A.length() + PART_1B.length() + PART_1C.length() + 
+        PART_2.length();
     
     
     /*[01]----------------------------------------------------------------------
@@ -250,20 +258,13 @@ public final class Global
      * 
      * @throws IOException Em caso de erro de IO
      */
-    public static void initializeFilenames() throws IOException
+    public static void initializeDirNames() throws IOException
     {
         jsonsDirName = JSONS_DIR_NAME; 
-        datDirName = DAT_DIR_NAME;
+        installDir = INSTALL_DIR;
+        datDirName = installDir + DAT_DIR_NAME;
         urlBase = URL_BASE;
-        resultsFilename = RESULTS_FILENAME;
-        nicksUserFilename = NICKS_USER_FILENAME;
-        wordsFilename = WORDS_FILENAME;
-        postListsFilename = POST_LISTS_FILENAME;
-        postExtendedFilename = POST_EXTENDED_FILENAME;
-        topicExtendedFilename = TOPIC_EXTENDED_FILENAME;
-        topicsWordsFilename = TOPICS_WORDS_FILENAME;
-        postListsForTopicsFilename = POST_LISTS_FOR_TOPICS_FILENAME;
-           
+                   
         helpFile = new File(datDirName + HELP_FILENAME);
         
         TextFileReader reader = 
@@ -289,20 +290,20 @@ public final class Global
      */
     public static void initializer() throws IOException
     {
-        initializeFilenames();
+        initializeDirNames();
            
-        topicsWordFinder = new WordReg(datDirName + topicsWordsFilename);
+        topicsWordFinder = new WordReg(datDirName + TOPICS_WORDS_FILENAME);
         
         topicsWordFinder.openToRead();
         
-        postsWordFinder = new WordReg(datDirName + wordsFilename);
+        postsWordFinder = new WordReg(datDirName + WORDS_FILENAME);
         
         postsWordFinder.openToRead();
                
         topicsPostRegArray = 
-            new PostRegArray(datDirName + postListsForTopicsFilename);
+            new PostRegArray(datDirName + POST_LISTS_FOR_TOPICS_FILENAME);
 
-        postsPostRegArray = new PostRegArray(datDirName + postListsFilename);        
+        postsPostRegArray = new PostRegArray(datDirName + POST_LISTS_FILENAME);        
                 
         nicksUserArray = new NicksUserArray();
         postExtendedArray = new PostExtendedArray();

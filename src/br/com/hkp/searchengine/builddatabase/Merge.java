@@ -4,8 +4,8 @@ import br.com.hkp.searchengine.registers.PostReg;
 import br.com.hkp.searchengine.registers.WordReg;
 import br.com.hkp.searchengine.util.Global;
 import static br.com.hkp.searchengine.util.Global.datDirName;
-import static br.com.hkp.searchengine.util.Global.postListsFilename;
-import static br.com.hkp.searchengine.util.Global.wordsFilename;
+import static br.com.hkp.searchengine.util.Global.POST_LISTS_FILENAME;
+import static br.com.hkp.searchengine.util.Global.WORDS_FILENAME;
 import java.io.IOException;
 
 /*******************************************************************************
@@ -49,9 +49,9 @@ public class Merge
            
         }//for
         
-        mergedWordsFile = new WordReg(datDirName + wordsFilename); 
+        mergedWordsFile = new WordReg(datDirName + WORDS_FILENAME); 
         
-        mergedPostsFile = new PostReg(datDirName + postListsFilename); 
+        mergedPostsFile = new PostReg(datDirName + POST_LISTS_FILENAME); 
                
     }//construtor 
     
@@ -200,7 +200,7 @@ public class Merge
     {
         try
         {
-            Global.initializeFilenames();
+            Global.initializeDirNames();
             
             buildLog = new BuildLog("/merge.log", 2048000);
             
