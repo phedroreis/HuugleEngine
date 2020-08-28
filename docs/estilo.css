@@ -1,5 +1,9 @@
 @charset "UTF-8";
+
+/*Layout da tabela*/
 @import url("table.default.css");
+
+/*fonte utilizada nos paragrafos*/
 @font-face
 {
     font-family: 'robot';
@@ -8,11 +12,74 @@
 
 
 /*******************************************************************************
-*                             Configuracao de body                             *
+*                             Configuracoes                                    *
 *******************************************************************************/
+
+/*Cor de fundo da pagina*/
 body
 {
     background-color: rgb(206, 206, 199);
+}
+
+/*Estilo dos paragrafos*/
+p
+{
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 22px;
+    font-family: robot;
+    font-size: 18px;
+    padding-bottom: 10px;
+
+}
+
+/*Estilo de paragrafo que simula terminal Unix/Win*/
+p.terminal
+{
+    text-indent: 0px;
+    background-color: black;
+    color: white;
+    line-height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/*Fonte de subtitulo*/
+h2
+{
+    font-family: 'robot';
+}
+
+/*Secao com instrucoes de instalacao para o Forum CC*/
+div#cc
+{
+    border-style: groove;
+    margin: 10px;
+    padding: 10px;
+}
+
+/*Secao com instrucoes para obter e instalar arquivos de indices*/
+div#database
+{
+    border-style: groove;
+    margin: 10px;
+    padding: 10px;
+}
+
+/*Secao com instrucoes para compilar os fontes*/
+div#compile
+{
+    border-style: groove;
+    margin: 10px;
+    padding: 10px;
+}
+
+/*Destaque para nomes de diretorios*/
+span.dir
+{
+    font-weight: 600;
 }
 
 /*******************************************************************************
@@ -28,58 +95,5 @@ table.default td.defaultInfoCol a img:hover
    background : url("buttonOver.png");
 }
 
-p
-{
-    text-indent: 30px;
-    text-align: justify;
-    line-height: 22px;
-    font-family: robot;
-    font-size: 18px;
-    padding-bottom: 10px;
-
-}
-
-p.terminal
-{
-    text-indent: 0px;
-    background-color: black;
-    color: white;
-    line-height: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-h2
-{
-    font-family: 'robot';
-}
-
-div#cc
-{
-    border-style: groove;
-    margin: 10px;
-    padding: 10px;
-}
-
-div#database
-{
-    border-style: groove;
-    margin: 10px;
-    padding: 10px;
-}
-
-div#compile
-{
-    border-style: groove;
-    margin: 10px;
-    padding: 10px;
-}
-
-span.dir
-{
-    color:  #8a1a0688;
-}
 
 
