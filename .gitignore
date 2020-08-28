@@ -12,6 +12,6 @@
 
 *.jar
 
-*.html
+/doc/*.html
 
 *.7z
