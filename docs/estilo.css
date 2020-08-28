@@ -3,7 +3,7 @@
 @font-face
 {
     font-family: 'robot';
-    src: url("../_fonts/RobotoSlab-VariableFont_wght.ttf");
+    src: url("RobotoSlab-VariableFont_wght.ttf");
 }
 
 
@@ -25,7 +25,7 @@ table.default td.defaultInfoCol
 
 table.default td.defaultInfoCol a img:hover
 {
-   background : url("../_images/buttonOver.png");
+   background : url("buttonOver.png");
 }
 
 p

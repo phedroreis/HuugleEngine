@@ -1,11 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <title>Huugle</title>
+
 </head>
+
 <body>
-    <a href="_html/downloads.html">DOWNLOADS</a>
+
+    <h1>Downloads</h1>
+
+    <table class="default">
+
+        <caption>Download</caption>
+       
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Link</th>
+                <th>Tam.</th>
+                <th>&nbsp;&nbsp;&nbsp;Instruções de Instalação&nbsp;&nbsp;&nbsp;</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="defaultDescriptionCol">Cópia Estática do Fórum CC</td>
+                <td><a href="https://mega.nz/file/NnwyXIYT#Kvo6b3snx3XPtj7pQK4m1C4Z5dH3Dzo0RINww0OoVcA" target="_blank">clubecetico.org.7z</a></td>
+                <td>245.2 MB</td>
+                <td class="defaultInfoCol"><a href="#cc"><img src="button.png"></a></td>
+            </tr>
+            <tr>
+                <td class="defaultDescriptionCol">Arquivos de Índices</td>
+                <td><a href="https://mega.nz/file/Eygi2AJY#53QAHmNPyp4nvvQ2S5nfAgQHdTV4OGJ5HqA4yhUwoSE" target="_blank" >database.7z</a></td>
+                <td>78.4 MB</td>
+                <td class="defaultInfoCol"><a href="#database"><img src="button.png"></a></td>
+            </tr>
+            <tr>
+                <td class="defaultDescriptionCol" rowspan="2">Código Fonte Java</td>
+                <td><a href="https://mega.nz/file/924UEaLb#lAN_Xl-0xSAch5quzcoIhSVOup3qUg11YlZZs2M6ETI" target="_blank" >Windows</a></td>
+                <td>50 KB</td>
+                <td class="defaultInfoCol"><a href="#win"><img src="button.png"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://mega.nz/file/N7glDARS#E2uuNY1gd-d8k0c--lHuJxZrLAOOtNrLzxciA5nnITI" target="_blank" >Debian-Ubuntu</a></td>
+                <td>48 KB</td>
+                <td class="defaultInfoCol"><a href="#lin"><img src="button.png"></a></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <td colspan="4">Atualizado em 20/08/2020</td>
+        </tfoot>
+        
+    </table>
+    
+    <article>
+        <div id="cc">
+            <h2>Instalação da Cópia Estática do Fórum Clube Cético</h2>
+            <p>
+                Descompacte o arquivo baixado. 
+            </p>
+            <p>
+                No sistema Windows copie a pasta <em>/clubecetico.org</em> para qualquer local. No Ubuntu copie para a pasta de sistema <em>/opt</em>.
+            </p>
+            <p>
+                Na pasta <em>/clubecetico.org</em> basta clicar sobre o arquivo <b>index-html</b> (ou <b>index-2.html)</b> para reproduzir a experiência de navegar pelo antigo fórum.
+            </p>
+        </div>
+
+        <div id="database"> 
+            <h2>Instalação dos Arquivos de Índice da Ferramenta de Busca Huugle</h2>
+            <p>
+                Descompactando o arquivo baixado obtém-se a pasta <em>/database</em>,
+                que contém principalmente os arquivos de índice necessários à ferramenta de busca.
+            </p>
+            <p>
+                É necessário baixar este arquivo se você pretende utilizar a ferramenta de busca Huugle. Nesse caso o executável do programa deve ser
+                copiado para uma pasta de nome <em>/Huugle</em> que deve ser criada dentro de uma pasta de nomeada como <em>/clubecetico.org</em>. Ainda, a pasta <em>/database</em> deve ser copiada para esta mesma pasta <em>/Huugle</em> para que o programa possa acessar sua base de dados e realizar buscas de títulos de tópicos e posts a partir das palavras chaves fornecidas pelo usuário.
+            </p>
+            <p>
+                Mas se você baixou ou pretende baixar também a cópia estática do fórum, então uma pasta de nome <em>clubecetico.org</em> já existe ou vai existir no seu sistema. É a pasta com as páginas do fórum e demais arquivos necessários à sua exibição. Logo, a pasta <em>/Huugle</em> deve ser criada dentro desta pasta que você baixou (ou a ser baixada)
+                no arquivo <a href="https://mega.nz/file/NnwyXIYT#Kvo6b3snx3XPtj7pQK4m1C4Z5dH3Dzo0RINww0OoVcA" target="_blank"><b>clubecetico.org.7z</b></a>. Isso vai permitir que os links criados pelo programa (os resultados de uma pesquisa) apontem para páginas na sua cópia local e você possa abrir estas páginas no seu navegador.
+            </p>
+            <p>
+                Em outras palavras, os links para páginas da cópia local esperam que estes arquivos HTML estejam em uma pasta de nome <em>clubecetico.org</em> e que a própria ferramenta de busca HuugleEngine também esteja gravada em uma pasta dentro da pasta <em>clubecetico.org</em>.
+            </p>
+            <p>
+                Em sistemas Windows tanto o programa quanto a navegação pelo simulacro estático do fórum irão funcionar se a pasta <em>/clubecetico.org</em> for instalada em qualquer local. Em sistemas Debian-Ubuntu deve ser instalada dentro da pasta de sistema <em>/opt</em>.
+            </p>
+        </div>
+
+        <div id="compile">
+            <h2>Obter e Compilar o Código Fonte do Programa.</h2>
+            <p>
+                Não é fornecido nenhum instalador, para instalar o programa em seu sistema você deve proceder a instalação manual dos arquivos baixados conforme as instruções nesta página. 
+            </p>
+            <p style="text-decoration:underline">
+                Para compilar os arquivos obtidos é recomendado Oracle JDK14 ou superior.
+            </p>
+            </br>
+            
+
+            <h3 id="win">Para Windows (qualquer versão)</h3>
+            <p>
+                Descompacte a pasta <em>/src</em> do arquivo baixado no <a href="https://mega.nz/file/924UEaLb#lAN_Xl-0xSAch5quzcoIhSVOup3qUg11YlZZs2M6ETI" target="_blank">link</a>. 
+            </p>
+            <p>
+                Entre nessa pasta e execute o arquivo <b>compileHuugle.bat</b> contido nela. Isso irá gerar o <b>HuugleEngine.jar</b>, que é o executável do programa. 
+            </p>
+            <p>
+                Talvez o path no seu sistema não esteja configurado para localizar o seu pacote de instalação Java. O que é necessário para que o script <b>compileHuugle.bat</b> possa chamar o compilador javac. Se for preciso, localize na pasta <em>/Arquivos de Programas</em> o caminho completo até o diretório <em>/bin</em> na pasta onde o java foi instalado e digite no terminal o comando path semelhante a esse:
+            </P>
+            <p class="terminal">
+                path c:\Arquivos de Programas\java\jdk8.0.14\bin
+            </p>
+            <p>
+                Observando que no seu sistema o caminho até a pasta <em>/bin</em> pode ser diferente.
+            </p>
+            </br>
+            <p> 
+                O executável precisa de seus arquivos de índice que estão em uma pasta de nome <em>/database</em> e que pode ser baixada <a href="https://mega.nz/file/Eygi2AJY#53QAHmNPyp4nvvQ2S5nfAgQHdTV4OGJ5HqA4yhUwoSE" target="_blank" >aqui</a>. Crie uma pasta de nome <em>/Huugle</em> e copie a pasta <em>/database</em> e o arquivo <b>HuugleEngine.jar</b> para ela.
+            </p>
+            <p>
+                Apenas isso é necesário para executar a ferramenta em sistemas Windows. Porém a ferramenta, a cada solicitação de busca, abre uma página no navegador com links para os resultados encontrados. Você pode selecionar se estes links irão apontar para páginas da cópia estática hospedada na <a href="https://clubecetico.org/acervo" target="_blank">web</a> , ou para as páginas da sua própria cópia estática no seu sistema de arquivos local. Caso tenha baixado e instalado a cópia estática do fórum em sua máquina.
+            </p>
+            <p>
+                No entanto para solicitar ao Huugle que aponte os resultados de uma busca para arquivos instalados em seu próprio sistema, é necessário que esta pasta <em>/Huugle</em> tenha sido copiada para a pasta <em>/clubecetico.org</em>, que você obtém ao descompactar <a href="https://mega.nz/file/NnwyXIYT#Kvo6b3snx3XPtj7pQK4m1C4Z5dH3Dzo0RINww0OoVcA" target="_blank">este arquivo</a>.
+            </p>
+            </br>    
+
+            <h3 id="lin">Para Ubuntu</h3>
+            <p>
+                Em primeiro lugar é aconselhável que você tenha Oracle JDK14 ou superior para compilar e executar o programa. Por default sistemas Debian instalam o OpenJDK, o que pode causar algum problema de incompatibilidade.
+            </p>
+            <p>
+                Para substitui-lo pelo Oracle JDK siga as instruções abaixo.
+            </p>
+            <p>
+                Desinstale o Open JDK com o comando:
+            </p>
+            <p class="terminal">
+                $ sudo apt-get remove --purge openjdk-*
+            </p>
+            <p>
+                Então instale a última versão do Oracle JDK que hoje, 20 de agosto de 2020, é o 14. Utilize os seguintes comandos:
+            </p>
+            <p class="terminal">
+                $ sudo add-apt-repository ppa:linuxuprising/java</br>
+                $ sudo apt update</br>
+                $ sudo aptinstall oracle-java14-installer
+            </p>
+            <p>
+                Ao final o terminal irá mostrar o contrato de licença da Oracle. Role a tela até o final e tecle <b>ESC</b>. Surge a opção de aceitar e você seleciona <em>sim</em> e tecla <b>ENTER</b>.
+            </p>
+            <p>
+                Agora você já pode executar o script <b>compileHuugle.sh</b>, um aquivo que está dentro da pasta <em>/src</em> contendo os fontes do programa para Debian-Ubuntu e que você baixou neste <a href="https://mega.nz/file/N7glDARS#E2uuNY1gd-d8k0c--lHuJxZrLAOOtNrLzxciA5nnITI" target="_blank" >link</a>.
+            </p>
+            <p>
+                Antes lembre-se de acessar as propriedades deste arquivo e marcar a opção "Tornar este arquivo executável", caso contrário o Linux não executará o script.
+            </p>
+            <p class="terminal">
+                $ ./compileHuugle.sh
+            </p>
+
+           
+
+        </div>
+
+    </article>
+   
+    
 </body>
+
 </html>
