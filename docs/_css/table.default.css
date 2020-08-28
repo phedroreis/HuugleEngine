@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*******************************************************************************
+*                      Configuracao de table class="default"                   *
+*******************************************************************************/
+table.default
+{
+    border-collapse: collapse;
+}
+
+table.default caption
+{
+    text-align: left;
+}
+
+table.default thead
+{
+    background-color: white;
+    text-align: center;
+    border-style: double;
+}
+
+table.default td.defaultDescriptionCol
+{
+    padding: 5px;
+    border: 1px;
+    border-style: solid;
+    font-style: oblique;
+    background-color: #f0c39f88;
+    text-align: left;
+}
+
+table.default tr:nth-child(even)
+{
+    background-color: #e76f0d3a;
+}
+
+table.default td
+{
+    padding: 5px;
+    border: 1px;
+    border-style: solid;
+}
+
+table.default tfoot td
+{
+  
+    border-style: none;
+    text-align: right;
+    font-size: 15px;
+}

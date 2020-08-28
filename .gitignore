@@ -5,7 +5,13 @@
 /log/
 
 *.pdf
+
 /dist/
+
 *.class
+
 *.jar
+
 *.html
+
+*.7z
