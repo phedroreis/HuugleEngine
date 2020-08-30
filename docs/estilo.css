@@ -10,6 +10,13 @@
     src: url("RobotoSlab-VariableFont_wght.ttf");
 }
 
+/* fonte do google logo*/
+@font-face
+{
+    font-family: 'huugle';
+    src : url("Product Sans Regular.ttf");
+}
+
 
 /*******************************************************************************
 *                             Configuracoes                                    *
@@ -31,6 +38,15 @@ p
     font-size: 18px;
     padding-bottom: 10px;
 
+}
+
+/*estilo do paragrafo do obituario do cc*/
+p#inmemorian
+{
+    text-indent: 190px;
+    font-size: 13px;
+    padding: 0px;
+    margin:0px;
 }
 
 /*Estilo de paragrafo que simula terminal Unix/Win*/
@@ -80,6 +96,46 @@ div#compile
 span.dir
 {
     font-weight: 600;
+
+}
+
+/*fonte do google logo*/
+span.huugle
+{
+    font-family: 'huugle';
+}
+
+/*********************************************************************************
+ *                   Cores das letras do Huugle logo                             *
+ ********************************************************************************/
+span#h1
+{
+    color: rgb(74, 132, 218);
+}
+
+span#u2
+{
+    color: rgb(202, 22, 9);
+}
+
+span#u3
+{
+    color: rgb(248, 193, 43);
+}
+
+span#g4
+{
+    color:  rgb(74, 132, 218);
+}
+
+span#l5
+{
+    color: rgb(2, 167, 49);
+}
+
+span#e6
+{
+    color: rgb(202, 22, 9);
 }
 
 /*******************************************************************************

@@ -10,11 +10,17 @@
 </head>
 
 <body>
-
+    <header>
+        <img src="logo.png"/>
+        <p id="inmemorian">
+            &#9733; 18/01/2005 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10013; 01/02/2020
+        </p>
+    </header>
+    </br></br>
     <h1>Downloads</h1>
 
     <table class="default">
-
+        
         <caption>Download</caption>
        
         <thead>
@@ -73,24 +79,24 @@
         </div>
 
         <div id="database"> 
-            <h2>Instalação dos Arquivos de Índice da Ferramenta de Busca Huugle</h2>
+            <h2>Instalação dos Arquivos de Índice da Ferramenta de Busca <span class="huugle"><span id="h1">H</span><span id="u2">u</span><span id="u3">u</span><span id="g4">g</span><span id="l5">l</span><span id="e6">e</span></span></h2>
             <p>
                 Descompactando o arquivo baixado obtém-se a pasta <em><span class="dir">database</span></em>,
                 que contém principalmente os arquivos de índice necessários à ferramenta de busca.
             </p>
             <p>
-                É necessário baixar este arquivo se você pretende utilizar a ferramenta de busca Huugle. Nesse caso o executável do programa deve ser
-                copiado para uma pasta de nome <em><span class="dir">Huugle</span></em> que deve ser criada dentro de uma pasta de nomeada como <em><span class="dir">clubecetico.org</span></em>. Ficando :  <em><span class="dir">clubecetico.org/Huugle.</span></em>
+                É necessário baixar este arquivo se você pretende utilizar a ferramenta de busca <span class="huugle"><span id="h1">H</span><span id="u2">u</span><span id="u3">u</span><span id="g4">g</span><span id="l5">l</span><span id="e6">e</span></span>. Nesse caso o executável do programa deve ser
+                copiado para uma pasta de nome <em><span class="dir">Huugle</span></em> que deve ser criada dentro de uma pasta nomeada como <em><span class="dir">clubecetico.org</span></em>. Ficando:  <em><span class="dir">clubecetico.org/Huugle.</span></em>
             </p>
             <p>
                 Ainda, a pasta <em><span class="dir">database</span></em> deve ser copiada para esta mesma pasta <em><span class="dir">Huugle</span></em> para que o programa possa acessar sua base de dados e realizar buscas de títulos de tópicos e posts a partir das palavras chaves fornecidas pelo usuário.
             </p>
             <p>
-                Mas se você baixou ou pretende baixar também a cópia estática do fórum, então uma pasta de nome <em><span class="dir">clubecetico.org</span></em> já existe ou vai existir no seu sistema. É a pasta com as páginas do fórum e demais arquivos necessários à sua exibição. Logo, a pasta <em><span class="dir">Huugle</span></em> deve ser criada dentro desta pasta que você baixou (ou a ser baixada)
+                Mas se você baixou, ou pretende, baixar também a cópia estática do fórum, então uma pasta de nome <em><span class="dir">clubecetico.org</span></em> já existe ou vai existir no seu sistema. É a pasta com as páginas do fórum e demais arquivos necessários à sua exibição. Logo, a pasta <em><span class="dir">Huugle</span></em> deve ser criada dentro desta pasta que você baixou (ou a ser baixada) compactada 
                 no arquivo <a href="https://mega.nz/file/NnwyXIYT#Kvo6b3snx3XPtj7pQK4m1C4Z5dH3Dzo0RINww0OoVcA" target="_blank"><b>clubecetico.org.7z</b></a>. Isso vai permitir que os links criados pelo programa (os resultados de uma pesquisa) apontem para páginas na sua cópia local e você possa abrir estas páginas no seu navegador.
             </p>
             <p>
-                Em outras palavras, os links para páginas da cópia local esperam que estes arquivos HTML estejam em uma pasta de nome <em><span class="dir">clubecetico.org</span></em> e que a própria ferramenta de busca HuugleEngine também esteja gravada em uma pasta dentro da pasta <em><span class="dir">clubecetico.org</span></em>.
+                Em outras palavras, os links para páginas da cópia local esperam que estes arquivos HTML estejam em uma pasta de nome <em><span class="dir">clubecetico.org</span></em> e que a própria ferramenta de busca <span class="huugle"><span id="h1">H</span><span id="u2">u</span><span id="u3">u</span><span id="g4">g</span><span id="l5">l</span><span id="e6">e</span></span> também esteja gravada em uma pasta dentro da pasta <em><span class="dir">clubecetico.org</span></em>.
             </p>
             <p>
                 Em sistemas Windows tanto o programa quanto a navegação pelo simulacro estático do fórum irão funcionar se a pasta <em><span class="dir">clubecetico.org</span></em> for instalada em qualquer local. Em sistemas Debian-Ubuntu deve ser instalada dentro da pasta de sistema <em><span class="dir">/opt</span></em>.
@@ -116,10 +122,10 @@
                 Entre nessa pasta e execute o arquivo <b>compileHuugle.bat</b> contido nela. Isso irá gerar o <b>HuugleEngine.jar</b>, que é o executável do programa. 
             </p>
             <p>
-                Talvez o path no seu sistema não esteja configurado para localizar o seu pacote de instalação Java. O que é necessário para que o script <b>compileHuugle.bat</b> possa chamar o compilador javac. Se for preciso, localize na pasta <em><span class="dir">c:\Arquivos de Programas</span></em> o caminho completo até o diretório <em><span class="dir">bin</span></em> na pasta onde o java foi instalado e digite no terminal o comando path semelhante a esse:
+                Talvez o path no seu sistema não esteja configurado para localizar o seu pacote de instalação Java. O que é necessário para que o script <b>compileHuugle.bat</b> possa chamar o compilador javac. Se for preciso, localize na pasta <em><span class="dir">C:\Arquivos de Programas</span></em> o caminho completo até o diretório <em><span class="dir">bin</span></em> na pasta onde o java foi instalado e digite no terminal o comando path semelhante a esse:
             </P>
             <p class="terminal">
-                path c:\Arquivos de Programas\java\jdk8.0.14\bin
+                path C:\Arquivos de Programas\java\jdk8.0.14\bin
             </p>
             <p>
                 Observando que no seu sistema o caminho até a pasta <em><span class="dir">bin</span></em> pode ser diferente.
@@ -129,10 +135,10 @@
                 O executável precisa de seus arquivos de índice que estão em uma pasta de nome <em><span class="dir">database</span></em> e que pode ser baixada <a href="https://mega.nz/file/Eygi2AJY#53QAHmNPyp4nvvQ2S5nfAgQHdTV4OGJ5HqA4yhUwoSE" target="_blank" >aqui</a>. Crie uma pasta de nome <em><span class="dir">Huugle</span></em> e copie a pasta <em><span class="dir">database</span></em> e o arquivo <b>HuugleEngine.jar</b> para ela.
             </p>
             <p>
-                Apenas isso é necesário para executar a ferramenta em sistemas Windows. Porém a ferramenta, a cada solicitação de busca, abre uma página no navegador com links para os resultados encontrados. Você pode selecionar se estes links irão apontar para páginas da cópia estática hospedada na <a href="https://clubecetico.org/acervo" target="_blank">web</a> , ou para as páginas da sua própria cópia estática no seu sistema de arquivos local. Caso tenha baixado e instalado a cópia estática do fórum em sua máquina.
+                Apenas isso é necesário para executar a ferramenta <span class="huugle"><span id="h1">H</span><span id="u2">u</span><span id="u3">u</span><span id="g4">g</span><span id="l5">l</span><span id="e6">e</span></span> em sistemas Windows. Porém a ferramenta, a cada solicitação de busca, abre uma página no navegador com links para os resultados encontrados. Você pode selecionar se estes links irão apontar para páginas da cópia estática hospedada na <a href="https://clubecetico.org/acervo" target="_blank">web</a> , ou para as páginas da sua própria cópia estática no seu sistema de arquivos local. Caso tenha baixado e instalado a cópia estática do fórum em sua máquina.
             </p>
             <p>
-                No entanto para solicitar ao Huugle que aponte os resultados de uma busca para arquivos instalados em seu próprio sistema, é necessário que esta pasta <em><span class="dir">Huugle</span></em> tenha sido copiada para a pasta <em><span class="dir">clubecetico.org</span></em>, que você obtém ao descompactar <a href="https://mega.nz/file/NnwyXIYT#Kvo6b3snx3XPtj7pQK4m1C4Z5dH3Dzo0RINww0OoVcA" target="_blank">este arquivo</a>.
+                No entanto para solicitar ao <span class="huugle"><span id="h1">H</span><span id="u2">u</span><span id="u3">u</span><span id="g4">g</span><span id="l5">l</span><span id="e6">e</span></span> que aponte os resultados de uma busca para arquivos instalados em seu próprio sistema, é necessário que esta pasta <em><span class="dir">Huugle</span></em> tenha sido copiada para a pasta <em><span class="dir">clubecetico.org</span></em>, que você obtém ao descompactar <a href="https://mega.nz/file/NnwyXIYT#Kvo6b3snx3XPtj7pQK4m1C4Z5dH3Dzo0RINww0OoVcA" target="_blank">este arquivo</a>.
             </p>
             </br>    
 
