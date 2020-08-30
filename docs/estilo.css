@@ -25,7 +25,18 @@
 /*Cor de fundo da pagina*/
 body
 {
-    background-color: rgb(206, 206, 199);
+    background-color: rgba(206, 206, 199);
+}
+
+
+a:visited
+{
+    color: blue;
+}
+
+a:hover
+{
+    border-radius:5px;
 }
 
 /*Estilo dos paragrafos*/
@@ -103,6 +114,12 @@ span.dir
 span.huugle
 {
     font-family: 'huugle';
+}
+
+/*rodape da pagina*/
+footer
+{
+    text-align: center;
 }
 
 /*********************************************************************************

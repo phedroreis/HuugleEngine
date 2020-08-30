@@ -42,6 +42,17 @@ table.default td
     border-style: solid;
 }
 
+table.default td a
+{
+    color: rgb(80, 80, 80);
+}
+
+table.default td a:hover
+{
+    background-color:white;
+ 
+}
+
 table.default tfoot td
 {
   
