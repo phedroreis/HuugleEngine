@@ -3,16 +3,19 @@
 /*******************************************************************************
 *                      Configuracao de table class="default"                   *
 *******************************************************************************/
+/*bordas colapsadas nas celulas*/
 table.default
 {
     border-collapse: collapse;
 }
 
+/*titulo da tabela alinhado a esquerda*/
 table.default caption
 {
     text-align: left;
 }
 
+/*cabecalho da tabela*/
 table.default thead
 {
     background-color: white;
@@ -20,6 +23,7 @@ table.default thead
     border-style: double;
 }
 
+/*configuracao da primeira coluna da tabela*/
 table.default td.defaultDescriptionCol
 {
     padding: 5px;
@@ -30,11 +34,13 @@ table.default td.defaultDescriptionCol
     text-align: left;
 }
 
+/*tabela zebrada*/
 table.default tr:nth-child(even)
 {
     background-color: #e76f0d3a;
 }
 
+/*estilo de uma celula da tabela*/
 table.default td
 {
     padding: 5px;
@@ -42,20 +48,21 @@ table.default td
     border-style: solid;
 }
 
+/*cor dos links nas celulas*/
 table.default td a
 {
     color: rgb(80, 80, 80);
 }
 
+/*fundo branco nos links quando o mouse passa por cima*/
 table.default td a:hover
 {
     background-color:white;
- 
 }
 
+/*rodape sem borda e alinhado a direita*/
 table.default tfoot td
 {
-  
     border-style: none;
     text-align: right;
     font-size: 15px;

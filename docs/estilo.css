@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*Layout da tabela*/
+/*layout da tabela*/
 @import url("table.default.css");
 
 /*fonte utilizada nos paragrafos*/
@@ -10,7 +10,7 @@
     src: url("RobotoSlab-VariableFont_wght.ttf");
 }
 
-/* fonte do google logo*/
+/* fonte do Huugle logo*/
 @font-face
 {
     font-family: 'huugle';
@@ -22,24 +22,32 @@
 *                             Configuracoes                                    *
 *******************************************************************************/
 
-/*Cor de fundo da pagina*/
+/*cor de fundo da pagina*/
 body
 {
     background-color: rgba(206, 206, 199);
 }
 
+/*espacamento vertical acima e abaixo do header*/
+header
+{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
 
+/*cor do link depois que foi visitado*/
 a:visited
 {
     color: blue;
 }
 
+/*borda arredondada quando o mouse estiver sobre o link*/
 a:hover
 {
     border-radius:5px;
 }
 
-/*Estilo dos paragrafos*/
+/*estilo dos paragrafos*/
 p
 {
     text-indent: 30px;
@@ -60,7 +68,7 @@ p#inmemorian
     margin:0px;
 }
 
-/*Estilo de paragrafo que simula terminal Unix/Win*/
+/*estilo de paragrafo que simula terminal Unix/Win*/
 p.terminal
 {
     text-indent: 0px;
@@ -73,13 +81,13 @@ p.terminal
     border-radius: 10px;
 }
 
-/*Fonte de subtitulo*/
+/*fonte de subtitulo*/
 h2
 {
     font-family: 'robot';
 }
 
-/*Secao com instrucoes de instalacao para o Forum CC*/
+/*secao com instrucoes de instalacao para o Forum CC*/
 div#cc
 {
     border-style: groove;
@@ -87,7 +95,7 @@ div#cc
     padding: 10px;
 }
 
-/*Secao com instrucoes para obter e instalar arquivos de indices*/
+/*secao com instrucoes para obter e instalar arquivos de indices*/
 div#database
 {
     border-style: groove;
@@ -95,7 +103,7 @@ div#database
     padding: 10px;
 }
 
-/*Secao com instrucoes para compilar os fontes*/
+/*secao com instrucoes para compilar os fontes*/
 div#compile
 {
     border-style: groove;
@@ -103,7 +111,7 @@ div#compile
     padding: 10px;
 }
 
-/*Destaque para nomes de diretorios*/
+/*destaque para nomes de diretorios*/
 span.dir
 {
     font-weight: 600;
@@ -167,6 +175,3 @@ table.default td.defaultInfoCol a img:hover
 {
    background : url("buttonOver.png");
 }
-
-
-
