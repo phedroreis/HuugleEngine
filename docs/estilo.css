@@ -88,7 +88,7 @@ h2
 }
 
 /*secao com instrucoes de instalacao para o Forum CC*/
-div#cc
+section#cc
 {
     border-style: groove;
     margin: 10px;
@@ -96,7 +96,7 @@ div#cc
 }
 
 /*secao com instrucoes para obter e instalar arquivos de indices*/
-div#database
+section#database
 {
     border-style: groove;
     margin: 10px;
@@ -104,7 +104,7 @@ div#database
 }
 
 /*secao com instrucoes para compilar os fontes*/
-div#compile
+section#compile
 {
     border-style: groove;
     margin: 10px;
