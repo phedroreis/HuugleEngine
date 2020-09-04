@@ -3,21 +3,31 @@ package br.com.hkp.searchengine.gui;
 
 import br.com.hkp.searchengine.main.SearchEngine;
 import br.com.hkp.searchengine.main.SearchEngine.TreeSetNode;
+import static br.com.hkp.searchengine.util.Global.BODY_2;
+import static br.com.hkp.searchengine.util.Global.BODY_3;
+import static br.com.hkp.searchengine.util.Global.BODY_4;
+import static br.com.hkp.searchengine.util.Global.BODY_5;
+import static br.com.hkp.searchengine.util.Global.BODY_END;
+import static br.com.hkp.searchengine.util.Global.BODY_START;
+import static br.com.hkp.searchengine.util.Global.CCDirName;
 import static br.com.hkp.searchengine.util.Global.CONST_LENGTH;
-import static br.com.hkp.searchengine.util.Global.INFIX_1;
-import static br.com.hkp.searchengine.util.Global.INFIX_2;
-import static br.com.hkp.searchengine.util.Global.PART_1A;
-import static br.com.hkp.searchengine.util.Global.PART_1B;
-import static br.com.hkp.searchengine.util.Global.PART_1C;
-import static br.com.hkp.searchengine.util.Global.PART_2;
-import static br.com.hkp.searchengine.util.Global.PART_3;
-import static br.com.hkp.searchengine.util.Global.PREFIX;
-import static br.com.hkp.searchengine.util.Global.SUFIX;
+import static br.com.hkp.searchengine.util.Global.HEAD_2;
+import static br.com.hkp.searchengine.util.Global.HEAD_END;
+import static br.com.hkp.searchengine.util.Global.HEAD_START;
 import static br.com.hkp.searchengine.util.Global.VAR_LENGTH;
 import static br.com.hkp.searchengine.util.Global.datDirName;
 import static br.com.hkp.searchengine.util.Global.nicksUserArray;
 import static br.com.hkp.searchengine.util.Global.RESULTS_FILENAME;
+import static br.com.hkp.searchengine.util.Global.TABLE_END;
+import static br.com.hkp.searchengine.util.Global.TABLE_START;
+import static br.com.hkp.searchengine.util.Global.TD1_END;
+import static br.com.hkp.searchengine.util.Global.TD1_START;
+import static br.com.hkp.searchengine.util.Global.TD2_END;
+import static br.com.hkp.searchengine.util.Global.TD2_START;
+import static br.com.hkp.searchengine.util.Global.TD3_END;
+import static br.com.hkp.searchengine.util.Global.TD3_START;
 import static br.com.hkp.searchengine.util.Global.topicExtendedArray;
+import static br.com.hkp.searchengine.util.Global.urlBase;
 import br.com.hkp.searchengine.util.Util;
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -82,7 +92,7 @@ public final class ResultsFrame extends JFrame
         //Insere o icone do forum CC na janela de resultados
         try
         {
-            URL url = getClass().getResource("favicon.png");
+            URL url = getClass().getResource("huugle-logo.png");
             Image icon = Toolkit.getDefaultToolkit().getImage(url); 
             setIconImage(icon);
         }
@@ -178,23 +188,35 @@ public final class ResultsFrame extends JFrame
     )
         throws IOException
     {
+        String cc;
+        
+        if (webLinks)
+            cc = urlBase;
+        else
+            cc = CCDirName;
+        
         /*
         Preve quanta memoria sera necessaria para armazenar o texto do arquivo
         */
         int buffer = 
-            CONST_LENGTH + datDirName.length() * 2  + list.size() * VAR_LENGTH;
+            CONST_LENGTH + datDirName.length() * 3  + cc.length() * 2 +
+            list.size() * VAR_LENGTH;
         
         /*
         Cria um StringBuilder onde sera montado o texto do arquivo HTML
         */
         StringBuilder sb = new StringBuilder(buffer);
-        
+       
         /*
-        PART_1x e PART_2 sao partes jah prontas do arquivo, que serao sempre as 
-        mesmas. Como o header, etc... A string s eh inserida no local apropriado
+        Aqui partes jah prontas do arquivo, que serao sempre as 
+        mesmas, sao mescladas com os dados gerados pelo programa em uma pesquisa
+        .Como o header, etc... A string s eh inserida no local apropriado
         */
-        sb.append(PART_1A).append(datDirName).append(PART_1B).append(datDirName)
-        .append(PART_1C).append(s).append(PART_2);
+        sb.append(HEAD_START).append(datDirName).append(HEAD_2)
+        .append(datDirName).append(HEAD_END).append(BODY_START)
+        .append(cc).append(BODY_2)
+        .append(datDirName).append(BODY_3).append(cc).append(BODY_4).
+        append(s).append(BODY_5).append(TABLE_START);
         
         /*
         Conta quantos links jah inseriu no arquivo
@@ -227,13 +249,14 @@ public final class ResultsFrame extends JFrame
             topicExtendedArray.read(topicID);
             String title = topicExtendedArray.getTitle();
             String link = url + "\" target = \" _blank \">" + title;
-            
+                      
             /*
-            Acrescenta em StringBuilder sb o link montado. 
+            Acrescenta em StringBuilder sb uma linha da tabela de resultados
             */
-            sb.append(PREFIX).append(link).append(INFIX_1).
-            append(String.valueOf(l.getRank())).append(INFIX_2).
-            append(l.getDate()).append(SUFIX);
+            sb.append(TD1_START).append(link).append(TD1_END).
+            append(TD2_START).append(String.valueOf(l.getRank())).
+            append(TD2_END).append(TD3_START).append(l.getDate()).
+            append(TD3_END);
             
             /*
             O usuario escolhe quantos resultados por pagina mostrar. Se foi 
@@ -246,7 +269,7 @@ public final class ResultsFrame extends JFrame
         /*
         O sufixo, parte final do arquivo, eh acrescido a StringBuilder sb
         */
-        sb.append(PART_3);
+        sb.append(TABLE_END).append(BODY_END);
         /*
         O arquivo eh gravado em disco, SOBRESCREVENDO o arquivo de resultados
         anterior.

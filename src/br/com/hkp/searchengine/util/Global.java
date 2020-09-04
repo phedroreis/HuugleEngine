@@ -31,6 +31,7 @@ public final class Global
     public static String jsonsDirName; 
     public static String installDir;
     public static String datDirName;
+    public static String CCDirName;
     public static String urlBase;
     public static File helpFile;
     
@@ -179,74 +180,129 @@ public final class Global
     /**************************************************************************
      * Strings para compor o arquivo HTML listando resultados de uma pesquisa
      *************************************************************************/ 
-    public static final String PREFIX = 
+    public static final String TD1_START = 
        "<tr><td class=\"subject windowbg2\"><div ><span id=\"msg_\"><a href=\"";
-    public static final String INFIX_1 = 
-       "</a></span></div></td><td class=\"stats windowbg\">";
-    public static final String INFIX_2 = 
-       "</td><td class=\"lastpost windowbg2\">";
-    public static final String SUFIX = 
+    public static final String TD1_END = 
+       "</a></span></div></td>\n";
+    public static final String TD2_START =
+       "<td class=\"stats windowbg\">";
+    public static final String TD2_END = 
+       "</td>\n";
+    public static final String TD3_START =
+      "<td class=\"lastpost windowbg2\">";
+    public static final String TD3_END = 
        "<br /></td></tr>\n";
     
-    public static final String PART_1A = 
+    public static final String HEAD_START = 
 "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" " +
-"\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" +
-"<html xmlns=\"http://www.w3.org/1999/xhtml\">" +
-"<head><link rel=\"stylesheet\" type=\"text/css\" " +
-"href=\"";
+"\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n" +
+"<html xmlns=\"http://www.w3.org/1999/xhtml\">\n" +
+"<head>\n" +
+" <link rel=\"stylesheet\" type=\"text/css\" href=\"";
     
-    public static final String PART_1B =
-"/index_green.css?fin20\" />" +
-"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />" +
-"<meta name=\"description\" content=\"Pesquisa\" />" +
-"<title>Pesquisa</title><link rel=\"canonical\" " +
-"href=\"../forum/search.html\" /><link rel=\"index\" " +
-"href=\"../forum/search.html\" /></head><body>" +
-"<div id=\"wrapper\" style=\"width: 90%\">" +
-"<div id=\"header\"><div class=\"frame\">" +
-"<div id=\"top_section\"><h1 class=\"forumtitle\">" +
-"<a href=\"../index-2.html\">" +
-"<img src=\"";
+    public static final String HEAD_2 =
+"/index_green.css?fin20\" />\n" +
+" <link rel=\"shortcut icon\" type=\"image/png\" href=\"";
     
-    public static final String PART_1C = 
-"/logo.png\" " +
-"alt=\"Forum Clube Cetico\" /></a></h1></div>" +
-"<div id=\"upper_section\" class=\"middletext\"><div class=\"user\">" +
-"</div><div><a href=\"../index-2.html\"></a></div>" +
-"<div class=\"news normaltext\"></div></div>" +
-"<br class=\"clear\" /></div></div>" +
-"<div id=\"content_section\"><div class=\"frame\">" +
-"<div id=\"main_content_section\"><div class=\"navigate_section\"><ul><li>" +
-"<a href=\"../index-2.html\"><span>Forum Clube Cetico</span></a> &#187;" +
-"</li><li class=\"last\"><span>Pesquisa : ";
+public static final String HEAD_END =
+"/favicon.png\" />\n" +    
+" <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n" +
+" <meta name=\"description\" content=\"Pesquisa\" />\n" +
+" <title>Pesquisa</title>\n" +
+"</head>\n";
+
+public static final String BODY_START =
+"<body>\n" +
+" <div id=\"wrapper\" style=\"width: 90%\">\n" +
+"  <div id=\"header\">\n" +
+"   <div class=\"frame\">\n" +
+"    <div id=\"top_section\">\n" +
+"     <h1 class=\"forumtitle\"><a href=\"";
+    
+    public static final String BODY_2 = 
+"/index-2.html\"><img src=\"";
+    
+    public static final String BODY_3 =
+"/logo.png\" alt=\"Forum Clube Cetico\"/></a></h1>\n" +
+"    </div>\n" +
+"    <div id=\"upper_section\" class=\"middletext\">\n" +
+"     <div class=\"user\"></div>\n" +
+"     <div class=\"news normaltext\"></div>\n" +
+"    </div>\n" +
+"    <br class=\"clear\" />\n" +
+"   </div>\n" +
+"  </div>\n" +
+"  <div id=\"content_section\">\n" +
+"   <div class=\"frame\">\n" +
+"    <div id=\"main_content_section\">\n" +
+"     <div class=\"navigate_section\">\n" +
+"      <ul>\n" +
+"       <li>" +
+"        <a href=\"";
+    
+    public static final String BODY_4 =
+"/index-2.html\"><span>Forum Clube Cetico</span></a> &#187;" +
+"       </li>\n" +
+"       <li class=\"last\"><span>Pesquisa : ";
  
-    public static final String PART_2 =
-"</span></li></ul></div>" +
-"<a id=\"top\"></a><div class=\"pagesection\">" +
-"<div class=\"pagelinks floatleft\">P\u00e1ginas: [<strong>1</strong>]" +
-"  &nbsp;&nbsp;<a href=\"#bot\"><strong>Ir para o Fundo</strong></a></div>" +
-"</div><div class=\"tborder topic_table\" id=\"messageindex\">" +
-"<table class=\"table_grid\" cellspacing=\"0\"><thead>" +
-"<tr class=\"catbg\">" +
-"<th scope=\"col\" class=\"lefttext first_th\">T\u00f3pico</th>" +
-"<th scope=\"col\" width=\"14%\">Rank</th>" +
-"<th scope=\"col\" class=\"lefttext last_th\" width=\"22%\">Data</th>" +
-"</tr></thead><tbody>\n";
+    public static final String BODY_5 = 
+"</span></li>\n" +
+"      </ul>\n" +
+"     </div>\n" +
+"     <a id=\"top\"></a>\n" +
+"     <div class=\"pagesection\">\n" +
+"      <div class=\"pagelinks floatleft\">" +
+"       P\u00e1ginas: [<strong>1</strong>] &nbsp;&nbsp;\n" +
+"       <a href=\"#bot\"><strong>Ir para o Fundo</strong></a>\n" +
+"      </div>\n" +
+"     </div>\n" +
+"     <div class=\"tborder topic_table\" id=\"messageindex\">\n";
     
-    public static final String PART_3 = 
-"</tbody></table></div><a id=\"bot\"></a><div class=\"pagesection\">" +
-"<div class=\"pagelinks\">P\u00e1ginas: [<strong>1</strong>]  " +
-"&nbsp;&nbsp;<a href=\"#top\"><strong>Ir para o Topo</strong></a></div>" +
-"</div>	</div> </div></div><div id=\"footer_section\"><div class=\"frame\">" +
-"</div></div></div></body></html>";
+    public static final String TABLE_START =
+"      <table class=\"table_grid\" cellspacing=\"0\">\n" +
+"       <thead>\n" +
+"        <tr class=\"catbg\">\n" +
+"         <th scope=\"col\" class=\"lefttext first_th\">T\u00f3pico</th>\n" +
+"         <th scope=\"col\" width=\"14%\">Rank</th>\n" +
+"         <th scope=\"col\" class=\"lefttext last_th\" width=\"22%\">Data</th>" +
+"        </tr>\n" +
+"       </thead>\n" +
+"       <tbody>\n";
+    
+    public static final String TABLE_END = 
+"       </tbody>\n" +
+"      </table>\n"; 
+    
+    public static final String BODY_END =
+"     </div>\n" +
+"     <a id=\"bot\"></a>\n" +
+"     <div class=\"pagesection\">\n" +
+"      <div class=\"pagelinks\">\n" +
+"       P\u00e1ginas: [<strong>1</strong>] &nbsp;&nbsp;" +
+"<a href=\"#top\"><strong>Ir para o Topo</strong></a>\n" +
+"      </div>\n" +
+"     </div>\n" +
+"    </div>\n" +
+"   </div>\n" +
+"  </div>\n" +
+"  <div id=\"footer_section\">\n" +
+"   <div class=\"frame\"></div>\n" +
+"  </div>\n" +
+" </div>\n" +    
+"</body>\n" +
+"</html>";
   
     public static final int VAR_LENGTH = 
-        PREFIX.length() + INFIX_1.length() + INFIX_2.length() + SUFIX.length()
+        TD1_START.length() + TD1_END.length() + 
+        TD2_START.length() + TD2_END.length() +
+        TD3_START.length() + TD3_END.length() +
         + 500;
     
     public static final int CONST_LENGTH = 
-        PART_1A.length() + PART_1B.length() + PART_1C.length() + 
-        PART_2.length();
+        HEAD_START.length() + HEAD_2.length() + HEAD_END.length() + 
+        BODY_START.length() + BODY_2.length() + BODY_3.length() +
+        BODY_4.length() + BODY_5.length() + TABLE_START.length() + 
+        TABLE_END.length() + BODY_END.length();
     
     
     /*[01]----------------------------------------------------------------------
@@ -263,6 +319,7 @@ public final class Global
         jsonsDirName = JSONS_DIR_NAME; 
         installDir = INSTALL_DIR;
         datDirName = installDir + DAT_DIR_NAME;
+        CCDirName = installDir + "/clubecetico.org";
         urlBase = URL_BASE;
                    
         helpFile = new File(datDirName + HELP_FILENAME);

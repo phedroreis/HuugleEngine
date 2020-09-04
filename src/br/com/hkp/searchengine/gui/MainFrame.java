@@ -97,7 +97,7 @@ public final class MainFrame extends JFrame implements WindowListener
         //Insere o icone do forum na janela
         try
         {
-            URL url = getClass().getResource("favicon.png");
+            URL url = getClass().getResource("huugle-logo.png");
             setIconImage(Toolkit.getDefaultToolkit().getImage(url));
         }
         catch (Exception e)
